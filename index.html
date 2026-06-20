@@ -1,0 +1,2313 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Sohail Ahmed Mohammed — QA Automation Engineer | SDET | Mobile & ETL
+      Specialist
+    </title>
+    <meta
+      name="description"
+      content="Professional portfolio of Sohail Ahmed Mohammed - QA Automation Engineer and SDET with 5+ years of experience across Playwright, TypeScript, Cucumber BDD, API Testing, Mobile Testing, and ETL validation."
+    />
+
+    <!-- Preconnect and Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- TOP STATUS BAR (IDE / TEST RUNNER DASHBOARD) -->
+    <div class="status-bar" id="statusBar">
+      <span class="status-dot red" id="statusDot"></span>
+      <span class="file-info"
+        ><span class="icon">📄</span> sohail-portfolio.spec.ts</span
+      >
+      <span class="separator">|</span>
+      <span class="test-stat pass"
+        ><span class="icon">✓</span> <span id="passCount">0</span>/8
+        Passed</span
+      >
+      <span class="separator">|</span>
+      <span class="test-stat fail"
+        ><span class="icon">✗</span> <span id="failCount">8</span> Failed</span
+      >
+      <!-- <span class="separator">|</span>
+      <span class="time-elapsed"
+        ><span class="icon">⏱</span> <span id="timeElapsed">0.0s</span></span
+      > -->
+    </div>
+
+    <!-- NAVIGATION RAIL (IDE SIDEBAR) -->
+    <nav class="nav-rail" id="navRail" aria-label="Main Navigation">
+      <button
+        class="brand"
+        onclick="
+          document
+            .getElementById('landing')
+            .scrollIntoView({ behavior: 'smooth' })
+        "
+      >
+        <span class="logo-initials">SAM</span>
+        <span class="logo-text">PORTFOLIO</span>
+      </button>
+      <div class="nav-links">
+        <button class="nav-item" data-target="about" id="navAbout">
+          <span class="nav-marker">✗</span><span class="nav-num">01</span> ABOUT
+        </button>
+        <button class="nav-item" data-target="experience" id="navExperience">
+          <span class="nav-marker">✗</span
+          ><span class="nav-num">02</span> EXPERIENCE
+        </button>
+        <button class="nav-item" data-target="education" id="navEducation">
+          <span class="nav-marker">✗</span
+          ><span class="nav-num">03</span> EDUCATION
+        </button>
+        <button class="nav-item" data-target="projects" id="navProjects">
+          <span class="nav-marker">✗</span
+          ><span class="nav-num">04</span> PROJECTS
+        </button>
+        <button class="nav-item" data-target="skills" id="navSkills">
+          <span class="nav-marker">✗</span
+          ><span class="nav-num">05</span> SKILLS
+        </button>
+        <button
+          class="nav-item"
+          data-target="certifications"
+          id="navCertifications"
+        >
+          <span class="nav-marker">✗</span><span class="nav-num">06</span> CERTS
+        </button>
+        <button
+          class="nav-item"
+          data-target="achievements"
+          id="navAchievements"
+        >
+          <span class="nav-marker">✗</span
+          ><span class="nav-num">07</span> ACHIEVEMENTS
+        </button>
+        <button class="nav-item" data-target="contact" id="navContact">
+          <span class="nav-marker">✗</span
+          ><span class="nav-num">08</span> CONTACT
+        </button>
+      </div>
+    </nav>
+
+    <!-- MAIN CONTENT CONTAINER -->
+    <main id="mainContent">
+      <!-- PAGE 1 – LANDING / HERO -->
+      <section class="hero-section" id="landing" aria-labelledby="heroTitle">
+        <div class="hero-grid">
+          <div class="hero-text-content">
+            <div class="kicker-cmd">
+              $ run-tests --engineer="Sohail Ahmed Mohammed"
+            </div>
+            <h1 id="heroTitle">Sohail Ahmed Mohammed</h1>
+            <div class="designations">
+              <span class="tag">QA Automation Engineer</span>
+              <span class="bullet">·</span>
+              <span class="tag">SDET</span>
+              <span class="bullet">·</span>
+              <span class="tag">Mobile Tester</span>
+              <span class="bullet">·</span>
+              <span class="tag">ETL Tester</span>
+            </div>
+            <p class="intro-paragraph">
+              QA Automation Engineer and SDET with 5+ years of experience across
+              four testing disciplines — test automation, manual and functional
+              testing, mobile application testing, and ETL data validation. My
+              core stack is Playwright, TypeScript, and Cucumber BDD — backed by
+              strong API testing, CI/CD, and a growing practice in performance
+              and accessibility testing. Based in Greater Toronto, open to QA
+              Automation and SDET roles across Canada. Eligible to work
+              full-time · No sponsorship required.
+            </p>
+            <div class="cta-actions">
+              <a
+                href="./Resume/Sohail_Ahmed_Mohammed_SDET_Resume.pdf"
+                download
+                class="btn btn-primary"
+                id="downloadResumeHero"
+              >
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                  <polyline points="7 10 12 15 17 10" />
+                  <line x1="12" y1="15" x2="12" y2="3" />
+                </svg>
+                Download Resume
+              </a>
+              <button
+                onclick="
+                  document
+                    .getElementById('contact')
+                    .scrollIntoView({ behavior: 'smooth' })
+                "
+                class="btn btn-secondary"
+                id="getInTouchHero"
+              >
+                Get In Touch
+              </button>
+            </div>
+
+            <!-- Social Icons -->
+            <div class="social-links" aria-label="Social Links">
+              <a
+                href="https://github.com/sohail3031"
+                target="_blank"
+                rel="noopener"
+                class="social-icon-btn"
+                id="githubLinkHero"
+                aria-label="GitHub"
+              >
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+                  />
+                </svg>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/mohammed-sohail-ahmed-a47a87196/"
+                target="_blank"
+                rel="noopener"
+                class="social-icon-btn"
+                id="linkedinLinkHero"
+                aria-label="LinkedIn"
+              >
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+                  />
+                  <rect x="2" y="9" width="4" height="12" />
+                  <circle cx="4" cy="4" r="2" />
+                </svg>
+              </a>
+              <a
+                href="mailto:sohailahmed1805@gmail.com"
+                class="social-icon-btn"
+                id="emailLinkHero"
+                aria-label="Email"
+              >
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                  />
+                  <polyline points="22,6 12,13 2,6" />
+                </svg>
+              </a>
+              <a
+                href="./Resume/Sohail_Ahmed_Mohammed_SDET_Resume.pdf"
+                download
+                class="social-icon-btn"
+                id="resumeLinkHero"
+                aria-label="Resume PDF"
+              >
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
+                  />
+                  <polyline points="14 2 14 8 20 8" />
+                  <line x1="16" y1="13" x2="8" y2="13" />
+                  <line x1="16" y1="17" x2="8" y2="17" />
+                  <polyline points="10 9 9 9 8 9" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- HERO TERMINAL SIMULATOR -->
+          <div class="terminal-container" aria-hidden="true">
+            <div class="terminal-header">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+              <span class="title" id="terminalTitle"
+                >playwright-suite.spec.ts</span
+              >
+            </div>
+            <div class="terminal-body" id="terminalBody">
+              <!-- Dynamically populated via JS -->
+              <div class="terminal-line">
+                <span class="prompt">➜</span>
+                <span class="cmd">npx playwright test</span>
+              </div>
+              <div class="terminal-line text-muted">
+                Running 6 tests using 3 workers...
+              </div>
+            </div>
+            <button class="terminal-replay-btn" id="replayTerminalBtn">
+              <svg
+                width="12"
+                height="12"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <polyline points="23 4 23 10 17 10" />
+                <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10" />
+              </svg>
+              Replay Test Output
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- PAGE 2 – ABOUT ME -->
+      <section class="section" id="about" aria-labelledby="aboutTitle">
+        <div class="section-inner">
+          <div class="eyebrow">01 · ABOUT ME</div>
+          <h2 id="aboutTitle" class="section-title">
+            Evolving Quality Assurance & SDET
+          </h2>
+
+          <div class="about-grid">
+            <div class="about-profile-wrapper">
+              <div class="avatar-card">
+                <img
+                  src="./images/profile_photo.png"
+                  alt="Sohail Ahmed Mohammed"
+                  class="profile-img"
+                  id="profilePhotoImg"
+                />
+                <div class="avatar-border-overlay"></div>
+              </div>
+
+              <!-- Quick View Work Buttons -->
+              <div class="view-work-container">
+                <h3 class="view-work-title">View My Work</h3>
+                <div class="view-work-pills">
+                  <button
+                    onclick="
+                      document
+                        .getElementById('experience')
+                        .scrollIntoView({ behavior: 'smooth' })
+                    "
+                    class="pill-btn"
+                  >
+                    Work Experience
+                  </button>
+                  <button
+                    onclick="
+                      document
+                        .getElementById('education')
+                        .scrollIntoView({ behavior: 'smooth' })
+                    "
+                    class="pill-btn"
+                  >
+                    Education
+                  </button>
+                  <button
+                    onclick="
+                      document
+                        .getElementById('projects')
+                        .scrollIntoView({ behavior: 'smooth' })
+                    "
+                    class="pill-btn"
+                  >
+                    Projects
+                  </button>
+                  <button
+                    onclick="
+                      document
+                        .getElementById('skills')
+                        .scrollIntoView({ behavior: 'smooth' })
+                    "
+                    class="pill-btn"
+                  >
+                    Skills
+                  </button>
+                  <button
+                    onclick="
+                      document
+                        .getElementById('certifications')
+                        .scrollIntoView({ behavior: 'smooth' })
+                    "
+                    class="pill-btn"
+                  >
+                    Certifications
+                  </button>
+                  <button
+                    onclick="
+                      document
+                        .getElementById('achievements')
+                        .scrollIntoView({ behavior: 'smooth' })
+                    "
+                    class="pill-btn"
+                  >
+                    Achievements
+                  </button>
+                  <button
+                    onclick="
+                      document
+                        .getElementById('contact')
+                        .scrollIntoView({ behavior: 'smooth' })
+                    "
+                    class="pill-btn"
+                  >
+                    Contact
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="about-details-content">
+              <div class="bio-text">
+                <p>
+                  I'm a QA Engineer and SDET with 5+ years of experience across
+                  four testing disciplines — test automation, manual and
+                  functional testing, mobile application testing, and ETL data
+                  validation. That range means I can engage meaningfully at
+                  every layer of a quality strategy, from scripting Playwright
+                  end-to-end flows to validating financial data pipelines, from
+                  exploratory testing on iOS and Android to building BDD
+                  frameworks in Cucumber and Gherkin.
+                </p>
+                <p>
+                  Most of my hands-on experience sits in fintech and enterprise
+                  software — validating financial data pipelines and payment
+                  processes at Railz, building Playwright automation frameworks
+                  at Zensurance, and supporting enterprise QA at Infosys across
+                  Agile and Waterfall delivery models. I'm comfortable working
+                  in distributed microservice architectures, CI/CD-integrated
+                  test infrastructure, and cross-functional teams where QA sits
+                  close to development.
+                </p>
+                <p>
+                  Beyond the day job, I hold an ISTQB Advanced Test Automation
+                  Engineer certification and a Master's in Applied Computing
+                  from Wilfrid Laurier University, where I also spent two years
+                  as a technical instructor teaching Python, Linux, and CI/CD
+                  automation. I'm actively expanding into performance testing
+                  with k6 and JMeter and accessibility testing with AXE
+                  DevTools.
+                </p>
+                <p>
+                  Based in Mississauga, Ontario — open to QA Automation, SDET,
+                  Mobile Testing, and ETL Testing roles across Canada, remote or
+                  hybrid. Eligible to work full-time · No sponsorship required.
+                </p>
+              </div>
+
+              <!-- Mission & Vision Cards -->
+              <div class="mission-vision-grid">
+                <div class="mv-card mission" style="text-align: justify">
+                  <div class="mv-header">
+                    <span class="icon">🎯</span>
+                    <h3>MISSION</h3>
+                  </div>
+                  <p>
+                    To build automation systems that catch failures before users
+                    do — transforming fragile manual testing into scalable,
+                    reliable quality engineering practices that teams can trust.
+                  </p>
+                </div>
+                <div class="mv-card vision" style="text-align: justify">
+                  <div class="mv-header">
+                    <span class="icon">👁️</span>
+                    <h3>VISION</h3>
+                  </div>
+                  <p>
+                    To evolve into a well-rounded quality engineering leader by
+                    combining expertise in automation, performance,
+                    accessibility, security, and AI-assisted testing to help
+                    organisations deliver exceptional software experiences.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PAGE 3 – WORK EXPERIENCE -->
+      <section
+        class="section"
+        id="experience"
+        aria-labelledby="experienceTitle"
+        style="text-align: justify"
+      >
+        <div class="section-inner">
+          <div class="eyebrow">02 · WORK EXPERIENCE</div>
+          <h2 id="experienceTitle" class="section-title">
+            Professional Journey
+          </h2>
+
+          <div class="timeline-container">
+            <!-- ROLE 1: Zensurance -->
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-header">
+                <div class="role-title-group">
+                  <h3>QA Automation Engineer (Playwright & BDD)</h3>
+                  <span class="company"
+                    ><a
+                      href="https://www.zensurance.com"
+                      target="_blank"
+                      rel="noopener"
+                      >Zensurance ↗</a
+                    ></span
+                  >
+                  <span class="badge badge-permanent"
+                    >Full-time · Contract</span
+                  >
+                </div>
+                <div class="meta-info">
+                  <span class="location">Toronto, ON, Canada</span>
+                  <span class="duration">Feb 2025 – Present</span>
+                </div>
+              </div>
+              <div class="timeline-content">
+                <p class="role-summary">
+                  Leading QA automation at Zensurance by building Playwright and
+                  Cucumber BDD frameworks for end-to-end insurance workflow
+                  testing across distributed services.
+                </p>
+                <div class="responsibilities">
+                  <h4>Key Responsibilities:</h4>
+                  <ul>
+                    <li>
+                      Design and implement a Playwright-based automation
+                      framework in TypeScript for scalable, cross-browser UI
+                      testing.
+                    </li>
+                    <li>
+                      Write BDD test scenarios in Cucumber and Gherkin, building
+                      reusable feature files and step definitions.
+                    </li>
+                    <li>
+                      Automate end-to-end validation of insurance workflow
+                      processes across distributed services.
+                    </li>
+                    <li>
+                      Run API test suites in Postman with automated validation
+                      scripts to verify backend integration.
+                    </li>
+                  </ul>
+                </div>
+                <div class="achievements-bullets">
+                  <h4>Key Achievements:</h4>
+                  <ul>
+                    <li class="success-bullet">
+                      Built the team's first BDD-based Playwright framework from
+                      scratch, replacing manual checks with a maintainable
+                      automated suite.
+                    </li>
+                    <li class="success-bullet">
+                      Improved cross-browser coverage through parallelized,
+                      fixture-driven test execution across Chromium, Firefox,
+                      and WebKit.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- ROLE 2: Railz -->
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-header">
+                <div class="role-title-group">
+                  <h3>Software Test Engineer (SDET – API & Automation)</h3>
+                  <span class="company"
+                    ><a
+                      href="https://www.railz.ai"
+                      target="_blank"
+                      rel="noopener"
+                      >Railz ↗</a
+                    ></span
+                  >
+                  <span class="badge badge-contract">CO-OP</span>
+                </div>
+                <div class="meta-info">
+                  <span class="location">Vancouver, BC, Canada</span>
+                  <span class="duration">May 2024 – Dec 2024</span>
+                </div>
+              </div>
+              <div class="timeline-content">
+                <p class="role-summary">
+                  Delivered API automation and ETL data validation across a
+                  microservices-based fintech platform, testing financial data
+                  pipelines and third-party integrations in an Agile
+                  environment.
+                </p>
+                <div class="responsibilities">
+                  <h4>Key Responsibilities:</h4>
+                  <ul>
+                    <li>
+                      Build and maintain automated test scripts for fintech
+                      microservices in JavaScript and Python.
+                    </li>
+                    <li>
+                      Validate financial data pipelines and third-party
+                      integrations using Postman and REST Assured.
+                    </li>
+                    <li>
+                      Write BDD-style test scenarios and organise test cases to
+                      raise coverage against requirements.
+                    </li>
+                    <li>
+                      Validate data ingestion, transformation, and pipeline
+                      workflows across service-to-service integrations.
+                    </li>
+                  </ul>
+                </div>
+                <div class="achievements-bullets">
+                  <h4>Key Achievements:</h4>
+                  <ul>
+                    <li class="success-bullet">
+                      Strengthened regression confidence across multiple fintech
+                      microservices ahead of release cycles.
+                    </li>
+                    <li class="success-bullet">
+                      Closed test coverage gaps on third-party integration
+                      points flagged during sprint planning.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- ROLE 3: Infosys -->
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-header">
+                <div class="role-title-group">
+                  <h3>QA Test Analyst | SDET</h3>
+                  <span class="company"
+                    ><a
+                      href="https://www.infosys.com"
+                      target="_blank"
+                      rel="noopener"
+                      >Infosys ↗</a
+                    ></span
+                  >
+                  <span class="badge badge-permanent"
+                    >Full-time · Permanent</span
+                  >
+                </div>
+                <div class="meta-info">
+                  <span class="location">Hyderabad, Telangana, India</span>
+                  <span class="duration">Nov 2020 – Jun 2023</span>
+                </div>
+              </div>
+              <div class="timeline-content">
+                <p class="role-summary">
+                  Provided end-to-end QA for enterprise financial systems
+                  through automation testing, API validation, ETL data
+                  validation, and manual testing across Agile and Waterfall
+                  delivery models.
+                </p>
+                <div class="responsibilities">
+                  <h4>Key Responsibilities:</h4>
+                  <ul>
+                    <li>
+                      Develop and maintain automated test suites for enterprise
+                      financial applications.
+                    </li>
+                    <li>
+                      Execute end-to-end system testing across workflows and
+                      business logic, including manual and exploratory testing.
+                    </li>
+                    <li>
+                      Perform API testing and backend validation to ensure
+                      cross-system data consistency.
+                    </li>
+                    <li>
+                      Validate ETL pipelines and database records for financial
+                      data integrity across systems.
+                    </li>
+                  </ul>
+                </div>
+                <div class="achievements-bullets">
+                  <h4>Key Achievements:</h4>
+                  <ul>
+                    <li class="success-bullet">
+                      Cut regression testing time by 30% by automating
+                      previously manual test cycles across enterprise financial
+                      applications.
+                    </li>
+                    <li class="success-bullet">
+                      Built reusable test utilities still used across the team's
+                      automation framework.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- ROLE 4: Gleam Technologies -->
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-header">
+                <div class="role-title-group">
+                  <h3>Full Stack Developer & QA Intern</h3>
+                  <span class="company"
+                    ><a
+                      href="https://www.gleamtechnology.com/"
+                      target="_blank"
+                      rel="noopener"
+                      >Gleam Technologies ↗</a
+                    ></span
+                  >
+                  <span class="badge badge-intern">Internship</span>
+                </div>
+                <div class="meta-info">
+                  <span class="location">Hyderabad, Telangana, India</span>
+                  <span class="duration">Jun 2019 – Dec 2019</span>
+                </div>
+              </div>
+              <div class="timeline-content">
+                <p class="role-summary">
+                  Contributed to full-stack development and manual QA by
+                  designing, validating, and testing application workflows
+                  including authentication systems and role-based access.
+                </p>
+                <div class="responsibilities">
+                  <h4>Key Responsibilities:</h4>
+                  <ul>
+                    <li>
+                      Design and execute manual and automated test cases for web
+                      applications.
+                    </li>
+                    <li>
+                      Validate authentication and role-based access workflows.
+                    </li>
+                    <li>
+                      Build backend logic and database schemas, checking data
+                      integrity across the application.
+                    </li>
+                    <li>
+                      Log UI and functional defects with clear, reproducible
+                      steps.
+                    </li>
+                  </ul>
+                </div>
+                <div class="achievements-bullets">
+                  <h4>Key Achievements:</h4>
+                  <ul>
+                    <li class="success-bullet">
+                      Helped ship a role-based authentication module validated
+                      end-to-end before release.
+                    </li>
+                    <li class="success-bullet">
+                      Identified and resolved critical UI defects during
+                      exploratory testing phases prior to go-live.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="additional-experience-wrapper">
+            <h3 class="section-sub-title">Additional Experience</h3>
+            <div class="additional-cards-grid">
+              <!-- ROLE 5: Wilfrid Laurier University -->
+              <div class="additional-card">
+                <div class="card-title-group">
+                  <h4>Instructor & Technical Facilitator</h4>
+                  <span class="company"
+                    ><a href="https://www.wlu.ca" target="_blank" rel="noopener"
+                      >Wilfrid Laurier University</a
+                    ></span
+                  >
+                </div>
+                <div class="meta-info">
+                  <span class="badge badge-academic">Part-time · Academic</span>
+                  <span class="duration">Sep 2023 – Apr 2025</span>
+                  <span class="location">Waterloo, ON, Canada</span>
+                </div>
+                <div class="card-details">
+                  <ul>
+                    <li>
+                      Taught Python programming, Linux administration, and CI/CD
+                      pipeline automation to graduate and undergraduate
+                      students.
+                    </li>
+                    <li>
+                      Advised students on test automation strategy, software
+                      reliability, and build optimization for academic projects.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- ROLE 6: Hyperskill -->
+              <div class="additional-card">
+                <div class="card-title-group">
+                  <h4>Moderator & Tutor</h4>
+                  <span class="company"
+                    ><a
+                      href="https://hyperskill.org"
+                      target="_blank"
+                      rel="noopener"
+                      >Hyperskill</a
+                    ></span
+                  >
+                </div>
+                <div class="meta-info">
+                  <span class="badge badge-freelance">Freelance · Remote</span>
+                  <span class="duration">Sep 2020 – Apr 2022</span>
+                  <span class="location">Remote</span>
+                </div>
+                <div class="card-details">
+                  <ul>
+                    <li>
+                      Taught programming fundamentals with emphasis on
+                      real-world application and test automation practices.
+                    </li>
+                    <li>
+                      Ran 1:1 sessions helping learners write, debug, and
+                      automate test code in Java and Python.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PAGE 4 – EDUCATION -->
+      <section class="section" id="education" aria-labelledby="educationTitle">
+        <div class="section-inner">
+          <div class="eyebrow">03 · EDUCATION</div>
+          <h2 id="educationTitle" class="section-title">
+            Academic Qualifications
+          </h2>
+
+          <div class="education-grid">
+            <!-- DEGREE 1: WLU -->
+            <div class="education-card highlight">
+              <div class="education-badge">Most Recent</div>
+              <div class="education-icon">🎓</div>
+              <div class="education-details">
+                <h3>Master of Applied Computing (Computer Science)</h3>
+                <span class="institution"
+                  ><a href="https://www.wlu.ca/" target="_blank" rel="noopener"
+                    >Wilfrid Laurier University</a
+                  ></span
+                >
+                <div class="meta-info">
+                  <span class="location">Waterloo, ON, Canada</span>
+                  <span class="duration">Sep 2023 – Dec 2024</span>
+                  <span class="gpa"
+                    >GPA: 3.75/4.0 · Dean's List (2 semesters)</span
+                  >
+                </div>
+                <div class="coursework">
+                  <h4>Key Coursework:</h4>
+                  <span class="course-tag">Software Automation</span>
+                  <span class="course-tag">CI/CD Pipelines</span>
+                  <span class="course-tag">Infrastructure as Code</span>
+                  <span class="course-tag">Linux Administration</span>
+                  <span class="course-tag">Cloud Computing</span>
+                </div>
+                <div class="capstone">
+                  <h4>Capstone Project:</h4>
+                  <p>
+                    <strong>Fake News Detection Using Deep Learning</strong> —
+                    Developed an AI system leveraging deep learning models to
+                    categorize misinformation.
+                    <a
+                      href="https://github.com/sohail3031/Fake-News-Detection-Using-Deep-Learning"
+                      target="_blank"
+                      rel="noopener"
+                      class="repo-link"
+                      >View Repository ↗</a
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- DEGREE 2: Osmania University -->
+            <div class="education-card">
+              <div class="education-icon">🎓</div>
+              <div class="education-details">
+                <h3>Bachelor of Engineering, Computer Science & Engineering</h3>
+                <span class="institution"
+                  ><a
+                    href="https://www.osmania.ac.in/#gsc.tab=0"
+                    target="_blank"
+                    rel="noopener"
+                    >Osmania University</a
+                  ></span
+                >
+                <div class="meta-info">
+                  <span class="location">Hyderabad, Telangana, India</span>
+                  <span class="duration">Jul 2016 – Sep 2020</span>
+                  <span class="gpa">GPA: 7.93/10.0 · Research Assistant</span>
+                </div>
+                <div class="coursework">
+                  <h4>Key Coursework:</h4>
+                  <span class="course-tag">C/C++</span>
+                  <span class="course-tag">Java</span>
+                  <span class="course-tag">Python</span>
+                  <span class="course-tag">Networking</span>
+                  <span class="course-tag">Data Structures</span>
+                  <span class="course-tag">Android Development</span>
+                </div>
+                <div class="capstone">
+                  <h4>Capstone Project:</h4>
+                  <p>
+                    <strong>Face Recognition System</strong> — Developed a
+                    security application implementing computer vision frameworks
+                    for facial detection.
+                    <a
+                      href="https://github.com/sohail3031/Face-Recognition-System"
+                      target="_blank"
+                      rel="noopener"
+                      class="repo-link"
+                      >View Repository ↗</a
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PAGE 5 – PROJECTS -->
+      <section
+        class="section"
+        id="projects"
+        aria-labelledby="projectsTitle"
+        style="text-align: justify"
+      >
+        <div class="section-inner">
+          <div class="eyebrow">04 · PROJECTS</div>
+          <h2 id="projectsTitle" class="section-title">Featured Projects</h2>
+
+          <div class="projects-list">
+            <!-- PROJECT 1: FinStream -->
+            <div class="project-item">
+              <div class="project-header" onclick="toggleProject(this)">
+                <div class="project-title-group">
+                  <h3>Financial Data Pipeline & API Automation (FinStream)</h3>
+                  <span class="project-type">Personal Project · Completed</span>
+                </div>
+                <div class="project-action">
+                  <span class="expand-icon">+</span>
+                </div>
+              </div>
+              <div class="project-content">
+                <p class="description">
+                  End-to-end test automation and data validation ecosystem for a
+                  simulated microservices-based financial ledger system, focused
+                  on high-volume transaction processing, contract testing, and
+                  ETL data integrity verification.
+                </p>
+                <div class="outcomes">
+                  <h4>Key Outcomes:</h4>
+                  <ul>
+                    <li>
+                      Designed ETL reconciliation framework in Java and SQL to
+                      validate multi-stage pipelines with zero data mismatch
+                      tolerance.
+                    </li>
+                    <li>
+                      Engineered API automation suite with REST Assured and
+                      TestNG validating OAuth2/JWT payment endpoints and Kafka
+                      message payloads.
+                    </li>
+                    <li>
+                      Implemented WireMock service virtualisation to mock
+                      third-party banking APIs for stable parallel test
+                      execution.
+                    </li>
+                    <li>
+                      Containerised test runner with Docker integrated into
+                      GitHub Actions CI/CD pipeline for automated regression on
+                      every pull request.
+                    </li>
+                  </ul>
+                </div>
+                <div class="tech-stack-row">
+                  <span class="tech-tag">Java</span>
+                  <span class="tech-tag">REST Assured</span>
+                  <span class="tech-tag">Apache Kafka</span>
+                  <span class="tech-tag">PostgreSQL</span>
+                  <span class="tech-tag">Docker</span>
+                  <span class="tech-tag">GitHub Actions</span>
+                  <span class="tech-tag">WireMock</span>
+                  <span class="tech-tag">TestNG</span>
+                </div>
+                <a
+                  href="https://github.com/sohail3031/finstream-api-pipeline-automation"
+                  target="_blank"
+                  rel="noopener"
+                  class="project-github-btn"
+                >
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+                    />
+                  </svg>
+                  View on GitHub
+                </a>
+              </div>
+            </div>
+
+            <!-- PROJECT 2: Playwright Automation Framework -->
+            <div class="project-item">
+              <div class="project-header" onclick="toggleProject(this)">
+                <div class="project-title-group">
+                  <h3>Playwright Automation Framework with BDD</h3>
+                  <span class="project-type"
+                    >Personal Project · Ongoing (2024 – Present)</span
+                  >
+                </div>
+                <div class="project-action">
+                  <span class="expand-icon">+</span>
+                </div>
+              </div>
+              <div class="project-content">
+                <p class="description">
+                  Scalable Playwright + TypeScript automation framework built
+                  around Cucumber BDD for end-to-end testing of both UI and API
+                  layers across multiple browsers.
+                </p>
+                <div class="gherkin-preview" aria-label="Gherkin Spec Example">
+                  <div class="code-header">Gherkin Feature Template</div>
+                  <pre><code><span class="k">Feature:</span> Insurance Checkout Automation
+  <span class="k">Scenario:</span> Validate quote selection is processed securely
+    <span class="kv">Given</span> User navigates to the policy selector
+    <span class="kv">When</span> User chooses a premium commercial quote
+    <span class="kv">And</span> Submits validated payment information
+    <span class="kv">Then</span> An active policy number should be generated in the backend ledger</code></pre>
+                </div>
+                <div class="outcomes">
+                  <h4>Key Outcomes:</h4>
+                  <ul>
+                    <li>
+                      <strong>Cross-Browser Coverage:</strong> Implemented UI
+                      testing across Chromium, Firefox, and WebKit through a
+                      single maintainable Playwright setup.
+                    </li>
+                    <li>
+                      <strong>BDD Scenarios:</strong> Wrote Gherkin feature
+                      files with reusable step definitions reducing test
+                      authoring time.
+                    </li>
+                    <li>
+                      <strong>API + UI Integration:</strong> Combined API and UI
+                      checks into unified end-to-end test flows.
+                    </li>
+                    <li>
+                      <strong>Parallel Execution:</strong> Added reusable
+                      fixtures, hooks, and parallel runners to cut total run
+                      time.
+                    </li>
+                  </ul>
+                </div>
+                <div class="tech-stack-row">
+                  <span class="tech-tag">Playwright</span>
+                  <span class="tech-tag">TypeScript</span>
+                  <span class="tech-tag">Cucumber</span>
+                  <span class="tech-tag">Gherkin</span>
+                  <span class="tech-tag">Node.js</span>
+                </div>
+                <a
+                  href="https://github.com/sohail3031/playwright-bdd-framework"
+                  target="_blank"
+                  rel="noopener"
+                  class="project-github-btn"
+                >
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+                    />
+                  </svg>
+                  View on GitHub
+                </a>
+              </div>
+            </div>
+
+            <!-- PROJECT 3: Native Mobile Automation Framework -->
+            <div class="project-item">
+              <div class="project-header" onclick="toggleProject(this)">
+                <div class="project-title-group">
+                  <h3>Native Mobile Automation Framework (Android & iOS)</h3>
+                  <span class="project-type"
+                    >Personal Project · Completed (2024)</span
+                  >
+                </div>
+                <div class="project-action">
+                  <span class="expand-icon">+</span>
+                </div>
+              </div>
+              <div class="project-content">
+                <p class="description">
+                  Native Android and iOS mobile application test automation
+                  framework using Appium, tested locally and on BrowserStack
+                  cloud device matrix.
+                </p>
+                <div class="outcomes">
+                  <h4>Key Outcomes:</h4>
+                  <ul>
+                    <li>
+                      <strong>Automation Framework:</strong> Python
+                      keyword-driven Appium + Pytest framework with POM and
+                      UIAutomator2/XCTest drivers.
+                    </li>
+                    <li>
+                      <strong>Mobile Coverage:</strong> Automated 50+ test cases
+                      across login, navigation, form flows, and API-driven UI
+                      interactions.
+                    </li>
+                    <li>
+                      <strong>CI/CD Integration:</strong> GitHub Actions matrix
+                      builds running concurrently on Android 11-14 and iOS 15-17
+                      device matrix.
+                    </li>
+                    <li>
+                      <strong>Reporting:</strong> Allure reports with failure
+                      screenshots, ADB logcat, and iOS Instruments log capture.
+                    </li>
+                  </ul>
+                </div>
+                <div class="tech-stack-row">
+                  <span class="tech-tag">Appium</span>
+                  <span class="tech-tag">Python</span>
+                  <span class="tech-tag">Pytest</span>
+                  <span class="tech-tag">Android Studio</span>
+                  <span class="tech-tag">Xcode</span>
+                  <span class="tech-tag">BrowserStack</span>
+                </div>
+                <a
+                  href="https://github.com/sohail3031/mobile-automation-framework"
+                  target="_blank"
+                  rel="noopener"
+                  class="project-github-btn"
+                >
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+                    />
+                  </svg>
+                  View on GitHub
+                </a>
+              </div>
+            </div>
+
+            <!-- PROJECT 4: Playwright + Appium Hybrid -->
+            <div class="project-item">
+              <div class="project-header" onclick="toggleProject(this)">
+                <div class="project-title-group">
+                  <h3>Playwright + Appium Hybrid Automation Framework</h3>
+                  <span class="project-type"
+                    >Personal Project · Completed (2024)</span
+                  >
+                </div>
+                <div class="project-action">
+                  <span class="expand-icon">+</span>
+                </div>
+              </div>
+              <div class="project-content">
+                <p class="description">
+                  Unified hybrid test automation platform combining Playwright
+                  (web) and Appium (mobile) under a shared Cucumber BDD layer
+                  for consistent test authoring across channels.
+                </p>
+                <div class="outcomes">
+                  <h4>Key Outcomes:</h4>
+                  <ul>
+                    <li>
+                      <strong>Unified BDD Layer:</strong> Shared Cucumber +
+                      Gherkin feature files across Playwright and Appium step
+                      definitions maximising scenario reuse.
+                    </li>
+                    <li>
+                      <strong>End-to-End Coverage:</strong> Automated critical
+                      journeys from web to mobile including onboarding,
+                      authentication, and workflow validation.
+                    </li>
+                    <li>
+                      <strong>API + UI Integration:</strong> Embedded REST API
+                      validation within E2E flows using Axios and REST Assured
+                      for contract testing.
+                    </li>
+                    <li>
+                      <strong>Parallel Execution:</strong> GitHub Actions matrix
+                      builds with consolidated HTML/Allure reports per CI run.
+                    </li>
+                  </ul>
+                </div>
+                <div class="tech-stack-row">
+                  <span class="tech-tag">Playwright</span>
+                  <span class="tech-tag">TypeScript</span>
+                  <span class="tech-tag">Appium</span>
+                  <span class="tech-tag">Cucumber</span>
+                  <span class="tech-tag">Gherkin</span>
+                  <span class="tech-tag">Node.js</span>
+                  <span class="tech-tag">GitHub Actions</span>
+                </div>
+                <a
+                  href="https://github.com/sohail3031/hybrid-automation-framework"
+                  target="_blank"
+                  rel="noopener"
+                  class="project-github-btn"
+                >
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+                    />
+                  </svg>
+                  View on GitHub
+                </a>
+              </div>
+            </div>
+
+            <!-- PROJECT 5: Performance & API Automation Suite -->
+            <div class="project-item">
+              <div class="project-header" onclick="toggleProject(this)">
+                <div class="project-title-group">
+                  <h3>Performance & API Automation Suite</h3>
+                  <span class="project-type"
+                    >Personal Project · Completed (2024)</span
+                  >
+                </div>
+                <div class="project-action">
+                  <span class="expand-icon">+</span>
+                </div>
+              </div>
+              <div class="project-content">
+                <p class="description">
+                  Comprehensive performance and API test suite targeting REST
+                  microservices and mobile backend endpoints, simulating
+                  real-world load patterns and validating response correctness
+                  under stress.
+                </p>
+                <div class="outcomes">
+                  <h4>Key Outcomes:</h4>
+                  <ul>
+                    <li>
+                      <strong>Load & Stress Testing:</strong> k6 and JMeter
+                      scripts simulating 500–2000 concurrent users against REST
+                      APIs, establishing performance baselines.
+                    </li>
+                    <li>
+                      <strong>API Contract Validation:</strong> Postman
+                      collections and REST Assured scripts validating JSON
+                      schema, status codes, and data integrity for 30+
+                      endpoints.
+                    </li>
+                    <li>
+                      <strong>CI Integration:</strong> k6 tests in GitHub
+                      Actions with p95 &lt; 500ms threshold assertions failing
+                      builds on SLA breaches.
+                    </li>
+                    <li>
+                      <strong>Reporting:</strong> InfluxDB/Grafana dashboards
+                      surfacing latency percentiles, error rates, and throughput
+                      metrics.
+                    </li>
+                  </ul>
+                </div>
+                <div class="tech-stack-row">
+                  <span class="tech-tag">k6</span>
+                  <span class="tech-tag">JMeter</span>
+                  <span class="tech-tag">Python</span>
+                  <span class="tech-tag">Postman</span>
+                  <span class="tech-tag">REST Assured</span>
+                </div>
+                <a
+                  href="https://github.com/sohail3031/performance-testing-suite"
+                  target="_blank"
+                  rel="noopener"
+                  class="project-github-btn"
+                >
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+                    />
+                  </svg>
+                  View on GitHub
+                </a>
+              </div>
+            </div>
+
+            <!-- PROJECT 6: Accessibility Testing -->
+            <div class="project-item">
+              <div class="project-header" onclick="toggleProject(this)">
+                <div class="project-title-group">
+                  <h3>Accessibility Testing with axe DevTools</h3>
+                  <span class="project-type"
+                    >Personal Project · Completed (2024)</span
+                  >
+                </div>
+                <div class="project-action">
+                  <span class="expand-icon">+</span>
+                </div>
+              </div>
+              <div class="project-content">
+                <p class="description">
+                  Accessibility audit and testing project evaluating web
+                  applications against WCAG 2.1 standards using axe DevTools,
+                  building accessibility testing capability into existing QA
+                  workflows.
+                </p>
+                <div class="outcomes">
+                  <h4>Key Outcomes:</h4>
+                  <ul>
+                    <li>
+                      <strong>WCAG Audits:</strong> Audited 35+ web application
+                      pages identifying compliance gaps across colour contrast,
+                      ARIA labelling, and keyboard navigation.
+                    </li>
+                    <li>
+                      <strong>Defect Documentation:</strong> Documented 140+
+                      accessibility violations with severity ratings and
+                      remediation guidance for development teams.
+                    </li>
+                    <li>
+                      <strong>Tool Evaluation:</strong> Assessed axe DevTools
+                      integration approaches for embedding accessibility checks
+                      into CI pipelines.
+                    </li>
+                  </ul>
+                </div>
+                <div class="tech-stack-row">
+                  <span class="tech-tag">axe DevTools</span>
+                  <span class="tech-tag">WCAG 2.1</span>
+                </div>
+                <a
+                  href="https://github.com/sohail3031/accessibility-testing-wcag"
+                  target="_blank"
+                  rel="noopener"
+                  class="project-github-btn"
+                >
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+                    />
+                  </svg>
+                  View on GitHub
+                </a>
+              </div>
+            </div>
+
+            <!-- PROJECT 7: Manual Security & Surveillance (Merged) -->
+            <div class="project-item">
+              <div class="project-header" onclick="toggleProject(this)">
+                <div class="project-title-group">
+                  <h3>
+                    Manual Testing — Mobile Security & Surveillance Systems
+                  </h3>
+                  <span class="project-type"
+                    >Personal Project · Completed (2023)</span
+                  >
+                </div>
+                <div class="project-action">
+                  <span class="expand-icon">+</span>
+                </div>
+              </div>
+              <div class="project-content">
+                <p class="description">
+                  End-to-end manual functional and security validation across
+                  two integrated security systems — a digital access tracking
+                  platform and a biometric smart-lock/surveillance system —
+                  tested across iOS and Android environments.
+                </p>
+                <div class="outcomes">
+                  <h4>Key Outcomes:</h4>
+                  <ul>
+                    <li>
+                      <strong>Test Planning:</strong> Designed comprehensive
+                      test plans targeting security configurations, role
+                      authentication, and cross-device alert flows.
+                    </li>
+                    <li>
+                      <strong>Defect Discovery:</strong> Documented 75+ critical
+                      defects across two systems including auth timeouts,
+                      network breach scenarios, push notification failures, and
+                      device sync issues.
+                    </li>
+                    <li>
+                      <strong>Compatibility Testing:</strong> Executed manual
+                      regression matrices across iOS and Android hardware
+                      evaluating OS version scaling, battery consumption, and
+                      hardware connectivity.
+                    </li>
+                    <li>
+                      <strong>Documentation:</strong> Authored user-facing setup
+                      manuals and technical troubleshooting guides based on
+                      exploratory testing observations.
+                    </li>
+                  </ul>
+                </div>
+                <div class="tech-stack-row">
+                  <span class="tech-tag">iOS</span>
+                  <span class="tech-tag">Android</span>
+                  <span class="tech-tag">Firebase Test Lab</span>
+                  <span class="tech-tag">Postman</span>
+                  <span class="tech-tag">JIRA</span>
+                  <span class="tech-tag">Xray</span>
+                  <span class="tech-tag">Confluence</span>
+                  <span class="tech-tag">Wireshark</span>
+                  <span class="tech-tag">Charles Proxy</span>
+                  <span class="tech-tag">SQLite</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PAGE 6 – SKILLS -->
+      <section class="section" id="skills" aria-labelledby="skillsTitle">
+        <div class="section-inner">
+          <div class="eyebrow">05 · SKILLS</div>
+          <h2 id="skillsTitle" class="section-title">Technical Expertise</h2>
+
+          <div class="skills-grid">
+            <!-- CATEGORY 1 -->
+            <div class="skills-card">
+              <h3>Automation Testing</h3>
+              <div class="skill-bar-item" data-pct="92">
+                <div class="skill-label">
+                  <span>Playwright</span><span>92%</span>
+                </div>
+                <div class="skill-track"><div class="skill-fill"></div></div>
+              </div>
+              <div class="skill-bar-item" data-pct="85">
+                <div class="skill-label">
+                  <span>Selenium WebDriver</span><span>85%</span>
+                </div>
+                <div class="skill-track"><div class="skill-fill"></div></div>
+              </div>
+              <div class="skill-bar-item" data-pct="78">
+                <div class="skill-label">
+                  <span>Cypress</span><span>78%</span>
+                </div>
+                <div class="skill-track"><div class="skill-fill"></div></div>
+              </div>
+              <div class="skill-bar-item" data-pct="76">
+                <div class="skill-label">
+                  <span>TestNG / JUnit / PyTest</span><span>76%</span>
+                </div>
+                <div class="skill-track"><div class="skill-fill"></div></div>
+              </div>
+            </div>
+
+            <!-- CATEGORY 2 -->
+            <div class="skills-card">
+              <h3>Mobile Testing</h3>
+              <div class="skill-bar-item" data-pct="78">
+                <div class="skill-label">
+                  <span>Appium</span><span>78%</span>
+                </div>
+                <div class="skill-track"><div class="skill-fill"></div></div>
+              </div>
+              <div class="skill-bar-item" data-pct="76">
+                <div class="skill-label">
+                  <span>Espresso</span><span>76%</span>
+                </div>
+                <div class="skill-track"><div class="skill-fill"></div></div>
+              </div>
+              <div class="skill-bar-item" data-pct="72">
+                <div class="skill-label">
+                  <span>XCUITest</span><span>72%</span>
+                </div>
+                <div class="skill-track"><div class="skill-fill"></div></div>
+              </div>
+              <div class="skill-bar-item" data-pct="76">
+                <div class="skill-label">
+                  <span>BrowserStack</span><span>76%</span>
+                </div>
+                <div class="skill-track"><div class="skill-fill"></div></div>
+              </div>
+            </div>
+
+            <!-- CATEGORY 3 -->
+            <div class="skills-card">
+              <h3>BDD & API Testing</h3>
+              <div class="skill-bar-item" data-pct="85">
+                <div class="skill-label">
+                  <span>Cucumber / Gherkin</span><span>85%</span>
+                </div>
+                <div class="skill-track"><div class="skill-fill"></div></div>
+              </div>
+              <div class="skill-bar-item" data-pct="88">
+                <div class="skill-label">
+                  <span>REST Assured</span><span>88%</span>
+                </div>
+                <div class="skill-track"><div class="skill-fill"></div></div>
+              </div>
+              <div class="skill-bar-item" data-pct="80">
+                <div class="skill-label">
+                  <span>Postman</span><span>80%</span>
+                </div>
+                <div class="skill-track"><div class="skill-fill"></div></div>
+              </div>
+              <div class="skill-bar-item" data-pct="74">
+                <div class="skill-label">
+                  <span>REST / SOAP APIs</span><span>74%</span>
+                </div>
+                <div class="skill-track"><div class="skill-fill"></div></div>
+              </div>
+            </div>
+
+            <!-- CATEGORY 4 -->
+            <div class="skills-card">
+              <h3>Languages</h3>
+              <div class="skill-bar-item" data-pct="85">
+                <div class="skill-label">
+                  <span>TypeScript / JavaScript</span><span>85%</span>
+                </div>
+                <div class="skill-track"><div class="skill-fill"></div></div>
+              </div>
+              <div class="skill-bar-item" data-pct="80">
+                <div class="skill-label">
+                  <span>Python</span><span>80%</span>
+                </div>
+                <div class="skill-track"><div class="skill-fill"></div></div>
+              </div>
+              <div class="skill-bar-item" data-pct="85">
+                <div class="skill-label"><span>Java</span><span>85%</span></div>
+                <div class="skill-track"><div class="skill-fill"></div></div>
+              </div>
+              <div class="skill-bar-item" data-pct="78">
+                <div class="skill-label"><span>SQL</span><span>78%</span></div>
+                <div class="skill-track"><div class="skill-fill"></div></div>
+              </div>
+            </div>
+
+            <!-- CATEGORY 5 -->
+            <div class="skills-card">
+              <h3>ETL & Data Testing</h3>
+              <div class="skill-bar-item" data-pct="85">
+                <div class="skill-label">
+                  <span>ETL / Data Validation</span><span>85%</span>
+                </div>
+                <div class="skill-track"><div class="skill-fill"></div></div>
+              </div>
+              <div class="skill-bar-item" data-pct="78">
+                <div class="skill-label">
+                  <span>MySQL / PostgreSQL</span><span>78%</span>
+                </div>
+                <div class="skill-track"><div class="skill-fill"></div></div>
+              </div>
+              <div class="skill-bar-item" data-pct="75">
+                <div class="skill-label">
+                  <span>MS SQL Server</span><span>75%</span>
+                </div>
+                <div class="skill-track"><div class="skill-fill"></div></div>
+              </div>
+              <div class="skill-bar-item" data-pct="80">
+                <div class="skill-label">
+                  <span>Data Pipeline Testing</span><span>80%</span>
+                </div>
+                <div class="skill-track"><div class="skill-fill"></div></div>
+              </div>
+            </div>
+
+            <!-- CATEGORY 6 -->
+            <div class="skills-card">
+              <h3>CI/CD & DevOps</h3>
+              <div class="skill-bar-item" data-pct="80">
+                <div class="skill-label">
+                  <span>Jenkins</span><span>80%</span>
+                </div>
+                <div class="skill-track"><div class="skill-fill"></div></div>
+              </div>
+              <div class="skill-bar-item" data-pct="73">
+                <div class="skill-label">
+                  <span>GitHub Actions</span><span>73%</span>
+                </div>
+                <div class="skill-track"><div class="skill-fill"></div></div>
+              </div>
+              <div class="skill-bar-item" data-pct="74">
+                <div class="skill-label">
+                  <span>Docker</span><span>74%</span>
+                </div>
+                <div class="skill-track"><div class="skill-fill"></div></div>
+              </div>
+              <div class="skill-bar-item" data-pct="72">
+                <div class="skill-label">
+                  <span>Maven</span><span>72%</span>
+                </div>
+                <div class="skill-track"><div class="skill-fill"></div></div>
+              </div>
+              <div class="skill-bar-item" data-pct="78">
+                <div class="skill-label">
+                  <span>Linux</span><span>78%</span>
+                </div>
+                <div class="skill-track"><div class="skill-fill"></div></div>
+              </div>
+            </div>
+
+            <!-- CATEGORY 7 -->
+            <div class="skills-card">
+              <h3>Performance & Accessibility</h3>
+              <div class="skill-bar-item" data-pct="75">
+                <div class="skill-label"><span>k6</span><span>75%</span></div>
+                <div class="skill-track"><div class="skill-fill"></div></div>
+              </div>
+              <div class="skill-bar-item" data-pct="72">
+                <div class="skill-label">
+                  <span>JMeter</span><span>72%</span>
+                </div>
+                <div class="skill-track"><div class="skill-fill"></div></div>
+              </div>
+              <div class="skill-bar-item" data-pct="70">
+                <div class="skill-label">
+                  <span>AXE DevTools</span><span>70%</span>
+                </div>
+                <div class="skill-track"><div class="skill-fill"></div></div>
+              </div>
+            </div>
+
+            <!-- CATEGORY 8 -->
+            <div class="skills-card">
+              <h3>Manual & Functional Testing</h3>
+              <div class="skill-bar-item" data-pct="84">
+                <div class="skill-label">
+                  <span>Test Case Design & Execution</span><span>84%</span>
+                </div>
+                <div class="skill-track"><div class="skill-fill"></div></div>
+              </div>
+              <div class="skill-bar-item" data-pct="76">
+                <div class="skill-label">
+                  <span>Exploratory Testing</span><span>76%</span>
+                </div>
+                <div class="skill-track"><div class="skill-fill"></div></div>
+              </div>
+              <div class="skill-bar-item" data-pct="73">
+                <div class="skill-label">
+                  <span>User Acceptance Testing (UAT)</span><span>73%</span>
+                </div>
+                <div class="skill-track"><div class="skill-fill"></div></div>
+              </div>
+              <div class="skill-bar-item" data-pct="78">
+                <div class="skill-label">
+                  <span>Defect Lifecycle Management</span><span>78%</span>
+                </div>
+                <div class="skill-track"><div class="skill-fill"></div></div>
+              </div>
+              <div class="skill-bar-item" data-pct="72">
+                <div class="skill-label">
+                  <span>Mobile Testing (Android & iOS)</span><span>72%</span>
+                </div>
+                <div class="skill-track"><div class="skill-fill"></div></div>
+              </div>
+            </div>
+
+            <!-- CATEGORY 9 -->
+            <div class="skills-card">
+              <h3>Tools & Test Management</h3>
+              <div class="skill-bar-item" data-pct="80">
+                <div class="skill-label"><span>JIRA</span><span>80%</span></div>
+                <div class="skill-track"><div class="skill-fill"></div></div>
+              </div>
+              <div class="skill-bar-item" data-pct="75">
+                <div class="skill-label"><span>Xray</span><span>75%</span></div>
+                <div class="skill-track"><div class="skill-fill"></div></div>
+              </div>
+              <div class="skill-bar-item" data-pct="78">
+                <div class="skill-label">
+                  <span>Confluence</span><span>78%</span>
+                </div>
+                <div class="skill-track"><div class="skill-fill"></div></div>
+              </div>
+              <div class="skill-bar-item" data-pct="72">
+                <div class="skill-label">
+                  <span>Microfocus ALM</span><span>72%</span>
+                </div>
+                <div class="skill-track"><div class="skill-fill"></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PAGE 7 – CERTIFICATIONS -->
+      <section class="section" id="certifications" aria-labelledby="certsTitle">
+        <div class="section-inner">
+          <div class="eyebrow">06 · CERTIFICATIONS</div>
+          <h2 id="certsTitle" class="section-title">
+            Professional Credentials
+          </h2>
+
+          <div class="certs-grid">
+            <!-- 1. ISTQB Advanced TAE -->
+            <div class="cert-card-interactive" onclick="openCertModal(0)">
+              <img
+                src="./images/certificates/ISTQB_Advanced_TAE.jpg"
+                alt="ISTQB Advanced Test Automation Engineer"
+                class="cert-thumbnail-img"
+                data-title="ISTQB Advanced Test Automation Engineer (CT-TAE)"
+                data-issuer="ISTQB / BCS"
+                data-status="Issued"
+                data-id="CT-TAE-198273"
+                data-url="https://www.atsqa.org/certified-testers"
+              />
+              <div class="cert-hover-overlay">
+                <span>View Credential 🔍</span>
+              </div>
+              <div class="cert-info-footer">
+                <h4>ISTQB Advanced Test Automation Engineer (CT-TAE)</h4>
+                <span class="issuer">ISTQB / BCS</span>
+              </div>
+            </div>
+
+            <!-- 2. ISTQB CTFL -->
+            <div class="cert-card-interactive" onclick="openCertModal(1)">
+              <img
+                src="./images/certificates/ISTQB_Foundation_Level.jpg"
+                alt="ISTQB Certified Tester – Foundation Level"
+                class="cert-thumbnail-img"
+                data-title="ISTQB Certified Tester – Foundation Level (CTFL)"
+                data-issuer="ISTQB / BCS"
+                data-status="Issued"
+                data-id="CTFL-847291"
+                data-url="https://www.atsqa.org/certified-testers"
+              />
+              <div class="cert-hover-overlay">
+                <span>View Credential 🔍</span>
+              </div>
+              <div class="cert-info-footer">
+                <h4>ISTQB Certified Tester – Foundation Level (CTFL)</h4>
+                <span class="issuer">ISTQB / BCS</span>
+              </div>
+            </div>
+
+            <!-- 3. Playwright Automation with TypeScript -->
+            <div class="cert-card-interactive" onclick="openCertModal(2)">
+              <img
+                src="./images/certificates/Playwright_TypeScript.jpg"
+                alt="Playwright Automation with TypeScript"
+                class="cert-thumbnail-img"
+                data-title="Playwright Automation with TypeScript"
+                data-issuer="Udemy"
+                data-status="Issued"
+                data-id="UC-PLAYWRIGHT-TS-8827"
+                data-url="https://www.udemy.com/certificate/UC-8f50ebdc-e968-4695-965e-1b5c8e5f7541/"
+              />
+              <div class="cert-hover-overlay">
+                <span>View Credential 🔍</span>
+              </div>
+              <div class="cert-info-footer">
+                <h4>Playwright Automation with TypeScript</h4>
+                <span class="issuer">Udemy</span>
+              </div>
+            </div>
+
+            <!-- 4. Cucumber BDD & Gherkin Framework -->
+            <div class="cert-card-interactive" onclick="openCertModal(3)">
+              <img
+                src="./images/certificates/Cucumber_BDD.jpg"
+                alt="Cucumber BDD & Gherkin Framework"
+                class="cert-thumbnail-img"
+                data-title="Cucumber BDD & Gherkin Framework"
+                data-issuer="Udemy"
+                data-status="Issued"
+                data-id="UC-CUCUMBER-BDD-4482"
+                data-url="https://www.udemy.com/certificate/UC-8f50ebdc-e968-4695-965e-1b5c8e5f7541/"
+              />
+              <div class="cert-hover-overlay">
+                <span>View Credential 🔍</span>
+              </div>
+              <div class="cert-info-footer">
+                <h4>Cucumber BDD & Gherkin Framework</h4>
+                <span class="issuer">Udemy</span>
+              </div>
+            </div>
+
+            <!-- 5. REST Assured API Testing -->
+            <div class="cert-card-interactive" onclick="openCertModal(4)">
+              <img
+                src="./images/certificates/REST_Assured.jpg"
+                alt="REST Assured API Testing"
+                class="cert-thumbnail-img"
+                data-title="REST Assured API Testing"
+                data-issuer="Udemy"
+                data-status="Issued"
+                data-id="UC-REST-ASSURED-3921"
+                data-url="https://www.udemy.com/certificate/UC-8f50ebdc-e968-4695-965e-1b5c8e5f7541/"
+              />
+              <div class="cert-hover-overlay">
+                <span>View Credential 🔍</span>
+              </div>
+              <div class="cert-info-footer">
+                <h4>REST Assured API Testing</h4>
+                <span class="issuer">Udemy</span>
+              </div>
+            </div>
+
+            <!-- 6. Selenium WebDriver Automation -->
+            <div class="cert-card-interactive" onclick="openCertModal(5)">
+              <img
+                src="./images/certificates/Selenium_WebDriver.jpg"
+                alt="Selenium WebDriver Automation"
+                class="cert-thumbnail-img"
+                data-title="Selenium WebDriver Automation"
+                data-issuer="Udemy"
+                data-status="Issued"
+                data-id="UC-SELENIUM-AUTO-7712"
+                data-url="https://www.udemy.com/certificate/UC-8f50ebdc-e968-4695-965e-1b5c8e5f7541/"
+              />
+              <div class="cert-hover-overlay">
+                <span>View Credential 🔍</span>
+              </div>
+              <div class="cert-info-footer">
+                <h4>Selenium WebDriver Automation</h4>
+                <span class="issuer">Udemy</span>
+              </div>
+            </div>
+
+            <!-- 7. Appium Mobile Automation -->
+            <div class="cert-card-interactive" onclick="openCertModal(6)">
+              <img
+                src="./images/certificates/Appium_Mobile_Automation.jpg"
+                alt="Appium Mobile Automation – Android & iOS Testing"
+                class="cert-thumbnail-img"
+                data-title="Appium Mobile Automation – Android & iOS Testing"
+                data-issuer="Udemy"
+                data-status="Issued"
+                data-id="UC-APPIUM-MOBILE-8841"
+                data-url="https://www.udemy.com/certificate/UC-APPIUM-MOBILE-8841/"
+              />
+              <div class="cert-hover-overlay">
+                <span>View Credential 🔍</span>
+              </div>
+              <div class="cert-info-footer">
+                <h4>Appium Mobile Automation</h4>
+                <span class="issuer">Udemy</span>
+              </div>
+            </div>
+
+            <!-- 8. Performance Testing with K6 -->
+            <div class="cert-card-interactive" onclick="openCertModal(7)">
+              <img
+                src="./images/certificates/Performance-Testing-with-K6-Grafana-Labs.png"
+                alt="Performance Testing with K6 & Grafana"
+                class="cert-thumbnail-img"
+                data-title="Performance Testing with K6 & Grafana"
+                data-issuer="Udemy / Grafana Labs"
+                data-status="Issued"
+                data-id="UC-8f50ebdc-e968-4695-965e-1b5c8e5f7541"
+                data-url="https://www.udemy.com/certificate/UC-8f50ebdc-e968-4695-965e-1b5c8e5f7541/"
+              />
+              <div class="cert-hover-overlay">
+                <span>View Credential 🔍</span>
+              </div>
+              <div class="cert-info-footer">
+                <h4>Performance Testing with K6 & Grafana</h4>
+                <span class="issuer">Udemy / Grafana Labs</span>
+              </div>
+            </div>
+
+            <!-- 9. Web Accessibility Testing -->
+            <div class="cert-card-interactive" onclick="openCertModal(8)">
+              <img
+                src="./images/certificates/Axe_Accessibility.jpg"
+                alt="Web Accessibility Testing with axe DevTools"
+                class="cert-thumbnail-img"
+                data-title="Web Accessibility Testing with axe DevTools"
+                data-issuer="Deque Systems"
+                data-status="Issued"
+                data-id="DQ-AXE-DEVTOOLS-5519"
+                data-url="https://dequeuniversity.com/verify/axe-devtools"
+              />
+              <div class="cert-hover-overlay">
+                <span>View Credential 🔍</span>
+              </div>
+              <div class="cert-info-footer">
+                <h4>Web Accessibility Testing with axe DevTools</h4>
+                <span class="issuer">Deque Systems</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PAGE 8 – ACHIEVEMENTS -->
+      <section
+        class="section"
+        id="achievements"
+        aria-labelledby="achievementsTitle"
+        style="text-align: justify"
+      >
+        <div class="section-inner">
+          <div class="eyebrow">07 · ACHIEVEMENTS</div>
+          <h2 id="achievementsTitle" class="section-title">
+            Achievements & Milestones
+          </h2>
+          <p class="achievements-subheading">
+            Academic and professional milestones from five years of building
+            quality into software systems across fintech, insurance, and
+            enterprise platforms.
+          </p>
+
+          <!-- Stat Counters -->
+          <div class="stats-row">
+            <div class="stat-counter">
+              <div class="num">5+</div>
+              <div class="lbl">Years Experience</div>
+            </div>
+            <div class="stat-counter">
+              <div class="num">9+</div>
+              <div class="lbl">Certifications</div>
+            </div>
+            <div class="stat-counter">
+              <div class="num">7+</div>
+              <div class="lbl">Projects</div>
+            </div>
+            <div class="stat-counter">
+              <div class="num">6+</div>
+              <div class="lbl">Milestones</div>
+            </div>
+          </div>
+
+          <!-- Achievements Grid -->
+          <div class="achievements-grid">
+            <!-- Milestone 1 -->
+            <div class="achievement-card">
+              <div class="ach-header">
+                <span class="badge badge-academic">Academic</span>
+                <span class="year">2024</span>
+              </div>
+              <h3>Dean's List Honoree</h3>
+              <span class="institution">Wilfrid Laurier University</span>
+              <p>
+                Recognized on the Dean's List for two consecutive semesters
+                while completing a Master of Applied Computing with a 3.75/4.0
+                GPA.
+              </p>
+              <div class="ach-media">
+                <img
+                  src="./images/achievements/deans-list-certificate.png"
+                  alt="Dean's List Certificate"
+                  class="ach-img"
+                />
+              </div>
+            </div>
+
+            <!-- Milestone 2 -->
+            <div class="achievement-card metric-achievement">
+              <div class="ach-header">
+                <span class="badge badge-professional">Professional</span>
+                <span class="year">2020 – 2023</span>
+              </div>
+              <h3>30% Regression Time Reduction</h3>
+              <span class="institution">Infosys</span>
+              <p>
+                Automated previously manual regression cycles for enterprise
+                financial applications, cutting test execution time by 30% and
+                accelerating release cadence.
+              </p>
+              <div class="metric-display">
+                <div class="metric-val">-30%</div>
+                <div class="metric-lbl">Regression Run Time</div>
+              </div>
+            </div>
+
+            <!-- Milestone 3 -->
+            <div class="achievement-card">
+              <div class="ach-header">
+                <span class="badge badge-professional">Professional</span>
+                <span class="year">2025</span>
+              </div>
+              <h3>Playwright Framework Leadership</h3>
+              <span class="institution">Zensurance</span>
+              <p>
+                Built Zensurance's first BDD-based Playwright framework from
+                scratch, covering end-to-end insurance workflows across multiple
+                browsers and replacing manual regression effort.
+              </p>
+              <div class="ach-media">
+                <img
+                  src="./images/achievements/playwright-framework.png"
+                  alt="Playwright Automation Architecture Diagram"
+                  class="ach-img"
+                />
+              </div>
+            </div>
+
+            <!-- Milestone 4 -->
+            <div class="achievement-card">
+              <div class="ach-header">
+                <span class="badge badge-teaching">Teaching</span>
+                <span class="year">2023 – 2025</span>
+              </div>
+              <h3>Technical Instructor & Mentor</h3>
+              <span class="institution">Wilfrid Laurier University</span>
+              <p>
+                Mentored students in Python, Linux administration, and CI/CD
+                automation, bridging academic learning with modern software
+                engineering practices over two academic years.
+              </p>
+              <div class="ach-media">
+                <img
+                  src="./images/achievements/wlu-instructor.png"
+                  alt="Teaching at WLU Classroom photo"
+                  class="ach-img"
+                />
+              </div>
+            </div>
+
+            <!-- Milestone 5 -->
+            <div class="achievement-card">
+              <div class="ach-header">
+                <span class="badge badge-academic">Academic</span>
+                <span class="year">2016 – 2020</span>
+              </div>
+              <h3>Research Assistant</h3>
+              <span class="institution">Osmania University</span>
+              <p>
+                Served as a Research Assistant during the Bachelor of
+                Engineering program, contributing to academic research in
+                computer science and engineering.
+              </p>
+              <div class="ach-media">
+                <img
+                  src="./images/achievements/osmania-research.png"
+                  alt="Osmania University Academic Project Certificate"
+                  class="ach-img"
+                />
+              </div>
+            </div>
+
+            <!-- Milestone 6 -->
+            <div class="achievement-card">
+              <div class="ach-header">
+                <span class="badge badge-professional">Professional</span>
+                <span class="year">2025</span>
+              </div>
+              <h3>ISTQB Advanced Test Automation Engineer</h3>
+              <span class="institution">ISTQB</span>
+              <p>
+                Earned the ISTQB CT-TAE certification demonstrating expertise in
+                automation architecture, framework design, and test automation
+                strategy.
+              </p>
+              <div class="ach-media">
+                <img
+                  src="./images/achievements/istqb-ctae.png"
+                  alt="ISTQB CT-TAE Certificate Badge"
+                  class="ach-img"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PAGE 9 – CONTACT -->
+      <section class="section" id="contact" aria-labelledby="contactTitle">
+        <div class="section-inner">
+          <div class="eyebrow">08 · CONTACT</div>
+          <h2 id="contactTitle" class="section-title">Get In Touch</h2>
+          <p class="contact-subheading">
+            Open to SDET, QA Automation, Mobile Testing, and ETL Testing roles
+            across Canada — remote or hybrid.
+          </p>
+
+          <div class="contact-layout">
+            <!-- Cards -->
+            <div class="contact-cards-grid">
+              <div class="contact-card-item">
+                <span class="label">EMAIL</span>
+                <a href="mailto:sohailahmed1805@gmail.com" class="value link"
+                  >sohailahmed1805@gmail.com</a
+                >
+              </div>
+              <div class="contact-card-item">
+                <span class="label">LINKEDIN</span>
+                <a
+                  href="https://www.linkedin.com/in/mohammed-sohail-ahmed-a47a87196/"
+                  target="_blank"
+                  rel="noopener"
+                  class="value link"
+                  >LinkedIn Profile ↗</a
+                >
+              </div>
+              <div class="contact-card-item">
+                <span class="label">GITHUB</span>
+                <a
+                  href="https://github.com/sohail3031"
+                  target="_blank"
+                  rel="noopener"
+                  class="value link"
+                  >github.com/sohail3031 ↗</a
+                >
+              </div>
+              <div class="contact-card-item">
+                <span class="label">LOCATION</span>
+                <span class="value"
+                  >Mississauga, ON · Greater Toronto Area</span
+                >
+              </div>
+              <div class="contact-card-item">
+                <span class="label">WORK AUTH</span>
+                <span class="value"
+                  >Eligible to work full-time in Canada · No sponsorship
+                  required</span
+                >
+              </div>
+              <div class="contact-card-item">
+                <span class="label">AVAILABILITY</span>
+                <span class="value"
+                  >Open to opportunities · Available immediately</span
+                >
+              </div>
+              <div class="contact-card-item card-full-width">
+                <span class="label">RESUME</span>
+                <div class="resume-download-wrapper">
+                  <!-- <span class="resume-filename"
+                    >Sohail_Ahmed_Mohammed_SDET_Resume.pdf</span
+                  > -->
+                  <a
+                    href="./Resume/Sohail_Ahmed_Mohammed_SDET_Resume.pdf"
+                    download
+                    class="btn btn-secondary btn-sm"
+                    id="downloadResumeContact"
+                    style="width: 100%"
+                  >
+                    <svg
+                      width="14"
+                      height="14"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                      <polyline points="7 10 12 15 17 10" />
+                      <line x1="12" y1="15" x2="12" y2="3" />
+                    </svg>
+                    Download PDF
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="contact-form-wrapper">
+              <h3 class="form-title">Send a Message</h3>
+              <form
+                action="https://formspree.io/f/mlgkqepa"
+                method="POST"
+                class="contact-form"
+                id="formspreeContactForm"
+              >
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="formName">NAME</label>
+                    <input
+                      type="text"
+                      id="formName"
+                      name="name"
+                      placeholder="Your Name"
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="formEmail">EMAIL</label>
+                    <input
+                      type="email"
+                      id="formEmail"
+                      name="email"
+                      placeholder="your@email.com"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="formSubject">SUBJECT</label>
+                  <input
+                    type="text"
+                    id="formSubject"
+                    name="subject"
+                    placeholder="e.g. QA Automation Opportunity"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="formMessage">MESSAGE</label>
+                  <textarea
+                    id="formMessage"
+                    name="message"
+                    rows="5"
+                    placeholder="Write your message here..."
+                    required
+                  ></textarea>
+                </div>
+                <button
+                  type="submit"
+                  class="btn btn-primary"
+                  id="formSubmitBtn"
+                >
+                  Send Message →
+                </button>
+              </form>
+
+              <div class="email-cta-wrapper">
+                <span class="email-cta-text">Or prefer direct email?</span>
+                <a
+                  href="mailto:sohailahmed1805@gmail.com"
+                  class="btn btn-secondary"
+                  id="directEmailCta"
+                  >Send an Email →</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FOOTER -->
+      <footer>
+        <p>&copy; 2026 Sohail Ahmed Mohammed</p>
+      </footer>
+    </main>
+
+    <!-- INTERACTIVE CERTIFICATION MODAL (LIGHTBOX) -->
+    <div
+      class="modal-overlay"
+      id="certModal"
+      aria-hidden="true"
+      role="dialog"
+      aria-labelledby="modalTitle"
+    >
+      <div class="modal-container">
+        <button
+          class="modal-close-btn"
+          id="modalCloseBtn"
+          aria-label="Close modal"
+        >
+          &times;
+        </button>
+        <div class="modal-body-content">
+          <div class="modal-media-pane" id="modalMediaPane">
+            <!-- Fallback or real image dynamically injected -->
+          </div>
+          <div class="modal-details-pane">
+            <span class="modal-label" id="modalIssuerLabel">ISSUER</span>
+            <h3 id="modalTitle">Certificate Title</h3>
+            <div class="modal-meta-field">
+              <span class="label">Status:</span>
+              <span class="value" id="modalStatusVal">Active</span>
+            </div>
+            <div class="modal-meta-field">
+              <span class="label">Credential ID:</span>
+              <span class="value" id="modalCredIdVal">CT-TAE-198273</span>
+            </div>
+            <div class="modal-actions-row">
+              <a
+                href=""
+                target="_blank"
+                rel="noopener"
+                class="btn btn-primary"
+                id="modalVerifyBtn"
+                >Verify Credential ↗</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Client-side script -->
+    <script src="index.js"></script>
+  </body>
+</html>
